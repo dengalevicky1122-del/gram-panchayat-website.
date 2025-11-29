@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ग्राम पंचायत वेबसाइट</title>
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            line-height: 1.6;
+        }
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 1rem;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            background: rgba(255,255,255,0.1);
+            border-radius: 25px;
+            padding: 0.5rem;
+        }
+        nav ul li {
+            margin: 0 1rem;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: background 0.3s;
+        }
+        nav ul li a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .section {
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .hero {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            padding: 2rem;
+            text-align: center;
+        }
+        .sarpanch, .sadasya, .government {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+            padding: 2rem;
+        }
+        .member {
+            display: flex;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            border-radius: 10px;
+            background: #f8f9fa;
+            transition: transform 0.3s;
+        }
+        .member:hover {
+            transform: translateY(-5px);
+        }
+        .member img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin-right: 2rem;
+            border: 4px solid #667eea;
+        }
+        .member h3 {
+            margin: 0;
+            color: #2c3e50;
+            font-size: 1.5rem;
+        }
+        .member p {
+            margin: 0.5rem 0 0 0;
+            color: #666;
+        }
+        footer {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                width: 100%;
+                background: rgba(255,255,255,0.1);
+                border-radius: 0;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            .menu-toggle {
+                display: block;
+            }
+            .member {
+                flex-direction: column;
+                text-align: center;
+            }
+            .member img {
+                margin-bottom: 1rem;
+                margin-right: 0;
+            }
+            header h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ग्रामपंचायत कार्यालय भातांगळी,लातूर</h1>
+        <nav>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+            <ul id="nav-menu">
+                <li><a href="#government">महाराष्ट्र सरकार</a></li>
+                <li><a href="#schemes">सरकारी योजना</a></li>
+                <li><a href="#sarpanch">सरपंच</a></li>
+                <li><a href="#sadasya">सदस्य</a></li>
+                <li><a href="#contact">संपर्क</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="section hero">
+        <img src="WhatsApp Image 2025-11-27 at 19.03.11_5376181a.jpg" alt="ग्राम पंचायत भातांगळी" style="max-width: 100%; height: auto; border-radius:px;">
+        <h2>ग्राम पंचायत भातांगळीमध्ये आपले स्वागत आहे.</h2>
+        <p>आमच्या ग्राम पंचायतमध्ये आपले हार्दिक स्वागत.</p>
+    </section>
+
+    <section id="government" class="section government">
+        <h2>महाराष्ट्र सरकार</h2>
+        <p><a href="https://www.maharashtra.gov.in/" target="_blank">महाराष्ट्र सरकार पोर्टल</a></p>
+        <div class="member">
+            <img src="download (1).jpg" alt="देवेंद्र फडणवीस">
+            <div>
+                <h3>देवेंद्र फडणवीस</h3>
+                <p>मुख्यमंत्री</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="download.jpg" alt="एकनाथ शिंदे">
+            <div>
+                <h3>एकनाथ शिंदे</h3>
+                <p>उपमुख्यमंत्री</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="ajit_pawar.png" alt="अजित पवार">
+            <div>
+                <h3>अजित पवार</h3>
+                <p>उपमुख्यमंत्री</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="schemes" class="section schemes">
+        <h2>सरकारी योजना</h2>
+        <div class="scheme">
+            <h3>झाडे लावा झाडे जगवा</h3>
+            <p>या योजनेअंतर्गत शेतकऱ्यांना झाडे लावण्यासाठी मदत दिली जाते, ज्यामुळे पर्यावरण संरक्षण आणि शेतकऱ्यांचे उत्पन्न वाढते. <a href="https://mahadbtmahait.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3> रोजगार हमी योजना</h3>
+            <p>या योजनेअंतर्गत बेरोजगारांना रोजगाराची हमी दिली जाते, ज्यामुळे गरीबी कमी होण्यास मदत होते. <a href="https://nrega.nic.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>उज्ज्वला गॅस सिलेंडर योजना</h3>
+            <p>या योजनेअंतर्गत गरीब कुटुंबांना स्वच्छ इंधन म्हणून गॅस सिलेंडर वितरण केले जाते. <a href="https://www.pmuy.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>रामाई घरकुल योजना</h3>
+            <p>या योजनेअंतर्गत गरीबांना घर बांधण्यासाठी आर्थिक मदत दिली जाते. <a href="https://mahadbtmahait.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>प्रधानमंत्री घरकुल योजना</h3>
+            <p>या योजनेअंतर्गत शहरी आणि ग्रामीण भागात घर बांधण्यासाठी अनुदान दिले जाते, ज्यामुळे सर्वांना पक्के घर मिळते. <a href="https://pmaymis.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>स्वच्छ भारत मिशन</h3>
+            <p>या योजनेअंतर्गत देशभरात स्वच्छता आणि स्वच्छतागृह बांधण्यासाठी प्रयत्न केले जातात. <a href="https://swachhbharatmission.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>आयुष्मान भारत योजना</h3>
+            <p>या योजनेअंतर्गत गरीबांना मोफत आरोग्य सेवा आणि विमा दिला जातो. <a href="https://www.pmjay.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>प्रधानमंत्री किसान योजना</h3>
+            <p>या योजनेअंतर्गत शेतकऱ्यांना आर्थिक मदत दिली जाते, ज्यामुळे शेतीचे उत्पन्न वाढते. <a href="https://pmkisan.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>बेटी बचाओ बेटी पढाओ</h3>
+            <p>या योजनेअंतर्गत मुलींच्या शिक्षणाला आणि कुटुंब नियोजनाला प्रोत्साहन दिले जाते. <a href="https://wcd.nic.in/bbbp" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>डिजिटल इंडिया</h3>
+            <p>या योजनेअंतर्गत देशात डिजिटल तंत्रज्ञानाचा प्रसार केला जातो. <a href="https://digitalindia.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>स्किल इंडिया</h3>
+            <p>या योजनेअंतर्गत तरुणांना कौशल्य प्रशिक्षण दिले जाते, ज्यामुळे रोजगाराच्या संधी वाढतात. <a href="https://www.skillindia.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>अटल पेन्शन योजना</h3>
+            <p>या योजनेअंतर्गत नागरिकांना पेन्शनची हमी दिली जाते. <a href="https://www.jansuraksha.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>सुकन्या समृद्धी योजना</h3>
+            <p>या योजनेअंतर्गत मुलींच्या भविष्यासाठी बचत योजना आहे. <a href="https://www.nsiindia.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+        <div class="scheme">
+            <h3>जन धन योजना</h3>
+            <p>या योजनेअंतर्गत गरीबांना बँक खाते आणि विमा दिला जातो. <a href="https://pmjdy.gov.in/" target="_blank">पोर्टल लिंक</a></p>
+        </div>
+    </section>
+
+    <section id="sarpanch" class="section sarpanch">
+        <h2>सरपंच</h2>
+        <div class="member">
+            <img src="WhatsApp Image 2025-11-27 at 19.03.11_5376181a.jpg" alt="श्री.परमेश्वर रावसाहेब पाटील">
+            <div>
+                <h3>श्री.परमेश्वर रावसाहेब पाटील</h3>
+                <p>ग्राम पंचायतचा सरपंच</p>
+            </div>
+        </div>
+    </section>
+    <section id="sarpanch" class="section sarpanch">
+        <h2>उपसरपंच</h2>
+        <div class="member">
+            <img src="" alt="">
+            <div>
+                <h3>श्री.मारोती रंगनाथ शिंदे</h3>
+                <p>ग्राम पंचायतचा उपसरपंच</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="sadasya" class="section sadasya">
+        <h2>सदस्य</h2>
+        <div class="member">
+            <img src="" alt="अनिल शर्मा">
+            <div>
+                <h3>अनिल शर्मा</h3>
+                <p>वॉर्ड सदस्य</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="" alt="प्रिया पटेल">
+            <div>
+                <h3>प्रिया पटेल</h3>
+                <p>वॉर्ड सदस्य</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="" alt="विक्रम सिंह">
+            <div>
+                <h3>विक्रम सिंह</h3>
+                <p>वॉर्ड सदस्य</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="" alt="मीरा जोशी">
+            <div>
+                <h3>मीरा जोशी</h3>
+                <p>वॉर्ड सदस्य</p>
+            </div>
+        </div>
+        <div class="member">
+            <img src="" alt="रमेश गुप्ता">
+            <div>
+                <h3>रमेश गुप्ता</h3>
+                <p>वॉर्ड सदस्य</p>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <p>आमच्याशी संपर्क साधा: info@grampanchayat.com | फोन: 123-456-7890</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('nav-menu');
+            menu.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
